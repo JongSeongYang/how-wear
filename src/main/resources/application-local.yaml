@@ -1,9 +1,21 @@
 server:
   port: 8081
-spring:
-  mvc:
-    pathmatch:
-      matching-strategy: ant_path_matcher
+springdoc:
+  default-consumes-media-type: application/json
+  default-produces-media-type: application/json
+  api-docs:
+    groups:
+      enabled: true
+  swagger-ui:
+    operations-sorter: method
+    tags-sorter: alpha
+    path: /swagger-ui.html
+    disable-swagger-default-url: true
+  packages-to-scan: com.someverything.howWear.controller
+#spring:
+#  mvc:
+#    pathmatch:
+#      matching-strategy: ant_path_matcher
   jpa:
     show-sql: true
     hibernate:
